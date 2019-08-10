@@ -1,0 +1,25 @@
+<div class="navbar-fixed">
+    <nav class="nav-extended white">
+        <div class="container">
+            <div class="nav-wrapper ">
+                <a href="/" class="brand-logo logo-text text-blue">Guiño </a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger text-blue"><i class="material-icons">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down text-dark text-dark">
+                    <li><a href="/frases" class="color text-blue tooltipped" data-position="bottom" data-tooltip="Diccionario de Frases" >  <i class="material-icons left ">import_contacts</i>  </a></li>
+                    <li><a href="/app/dash" class="color text-blue tooltipped" data-position="bottom" data-tooltip="Mis Clases">  <i class="material-icons left ">class</i> </a></li>
+                    <li><a href="#" class="color dropdown-trigger text-blue" style="font-weight:bold;" data-target="dropdown1" ><i class="material-icons left">account_circle</i><%= user.nombre %><i class="material-icons right">arrow_drop_down</i>  </a>    </li>
+                    <ul id="dropdown1" class="dropdown-content">
+                        <li ><a class="text-blue" href="/app/dash">Mis Clases</a></li>
+                        <li ><a class="text-blue" href="#" >Ajustes</a></li>
+                        <li><a  class="text-blue" href="http://localhost:3000/auth/logout"><i class="material-icons left">exit_to_app</i>Cerrar Sesion</a></li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>	
+<ul class="sidenav" id="mobile-demo">
+        <li ><a class="text-blue" href="/app/dash">Mis Clases</a></li>
+        <li ><a class="text-blue" href="#" >Ajustes</a></li>
+        <li><a  class="text-blue" href="http://localhost:3000/auth/logout"><i class="material-icons left">exit_to_app</i>Cerrar Sesion</a></li>
+</ul>

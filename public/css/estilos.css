@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Open+Sans|Montserrat|Lato|Poppins:300,400,500,700,800');
+body{
+	background-color: rgb(238, 238, 238);
+	font-family: 'Poppins','Open Sans','Lato', sans-serif;
+}
+
+.logo-text{
+    font-family: 'Poppins','Pacifico', cursive;
+    font-weight: bold;
+}
+
+.text-dark{
+	color: #576366;
+}
+.text-blue, nav .brand-logo{
+    color:#0277bd ;
+}
+
+.barra{
+    padding: 1.2em;
+    color:white;
+}
+.course:hover{
+    cursor: pointer
+}
+.titulo-curso{
+    font-size:80px;
+    padding: 1.5em 0;
+    color:white;
+    text-shadow: 0 2px  1px black;
+    letter-spacing: -0.5px;
+    font-weight: 900;
+}
+.collapsible{
+    box-shadow: none;
+}
+.leftBarra{
+    border-left:13px #ff4a6e solid;
+}
+.border-radius{
+    border-radius: 10px;
+}
+.border-radius-top{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.progreso-curso{
+    padding: 1em;
+    
+}
+.btn-back{
+    background: #ff4a6e;
+    padding: .5em 2em;
+    color:white;
+    font-weight: bold;
+}
+.barraDeco{
+    height: 300px;
+    position: absolute;
+    padding-top: 5%;
+}
+.row{
+    margin:0;
+}
+
+.p-3{
+    padding: 3%;
+}
+
+.resgistrarse{
+    background-image: url('../img/img_izquierda.png') , 
+    url('../img/img_derecha.png');
+    background-position: bottom left , bottom right;
+    background-repeat: no-repeat , no-repeat;
+    background-size: 600px 300px , 600px 300px;
+}
+.collection{
+    border:none;
+}
+
+.bg_auth{
+    background-image: url('/img/bg_auth.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-position-y: -5%;
+    background-position-x: 80%;
+}
+
+.theme-dark{
+
+
+}
+
+
+
+.landing-section {
+    height: 100vh;
+    background-image: url('https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode:overlay;
+    color: white
+}

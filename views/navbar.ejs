@@ -1,0 +1,31 @@
+<div class="navbar-fixed">
+    <nav class="nav-extended  white">
+            <div class="container">
+                <div class="nav-wrapper ">
+                <a href="/" class="brand-logo logo-text text-blue" style="font-family: 'Pacifico'">Guiño</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger text-blue"><i class="material-icons">menu</i></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down text-dark text-dark">
+                <li><a href="#our" class="color text-blue">  Nosotros</a></li>
+                <li><a href="#feature" class="color text-blue" > Características</a></li>
+                <li><a href="/frases" class="color text-blue" >  <i class="material-icons left ">import_contacts</i>  Diccionario de Frases</a></li>
+                <% if(isAuthenticated){  %>
+                    <li><a href="/app/dash" class="color text-blue tooltipped" data-position="bottom" data-tooltip="Mis Clases">  <i class="material-icons left ">class</i> </a></li>
+                    <li><a href="#" class="color dropdown-trigger text-blue"  data-target="dropdown1" ><i class="material-icons left">account_circle</i><%= user.nombre %></a></li>
+                    <ul id="dropdown1" class="dropdown-content">
+                        <li ><a href="#" class="text-blue">Ajustes</a></li>
+                        <li><a href="/auth/logout" class="text-blue"><i class="material-icons left">exit_to_app</i>Cerrar Sesion</a></li>
+                    </ul>
+                <% } else { %>
+                    <li><a href="/auth/signup" class="color text-blue" >    Registrate</a></li>
+                    <li><a href="/auth/login" class="color dropdown-trigger text-blue" ><i class="material-icons left">exit_to_app</i>Iniciar Sesion</a></li>
+                <% } %>
+                </ul>
+            </div>
+            </div>
+         </nav>
+</div>	
+<ul class="sidenav" id="mobile-demo">
+<li><a href="sass.html">Sass</a></li>
+<li><a href="badges.html">Components</a></li>
+<li><a href="collapsible.html">JavaScript</a></li>
+</ul>

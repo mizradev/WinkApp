@@ -1,0 +1,107 @@
+<%- include('headerDash'); %>
+<div class="container">
+    <br>
+    <div class="row card white p-3">
+        <h4 class="ml11" id="saludo"> </h4>
+        <p>¿Qué clase reforzaremos hoy?</p>
+    </div>    
+    <!--<div class="row card white">
+        <div class="col s12 m6">
+          <div class="">
+            <div class="card-content black-text">
+              <span class="card-title">Bienvenido <%= user.nombre %>, a la plataforma Guiño</span>
+              <p class="text-dark">Este es un catálogo de todos los videos de las clases en demanda con el objetivo de que puedas reforzar los temas vistos en clase. Navegar por todos los videos de la plataforma organizados por clases y semanas. Accede ya!.</p>
+              <h6>Listo para empezar a aprender el lenguaje de señas Hondureño?</h6>
+              <p class="text-dark">
+                  La plataforma, ofrece un diccionario de frases en lenguaje de señas. Crea, Comparte y Votá por la que más te guste!.
+              </p>
+              <br>
+              <button class="waves-effect waves-light btn blue darken-2"><i class="material-icons right">arrow_forward</i>IR AL DICCIONARIO DE FRASES</button>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 center-align">
+            <img src="https://static.teamtreehouse.com/assets/views/marketing/home/supportive-dc87dcd46e8cc60a76dfa72e7fceb5be004f60e573e13026dcbc5a43be1929a2.png" class="responsive-img" width="300" alt="">
+        </div>
+    </div>-->
+    <br>
+    <div class="row">
+        
+        <div class="col s12">
+          <ul class="tabs z-depth-1 text-blue">
+            <li class="tab col s12 m6"><a class="active " href="#test1">Clases</a></li>
+            <li class="tab col s12 m6"><a  href="#test2" class="text-blue" >Comunidad</></li>
+          </ul>
+        </div>
+        <div id="test1" class="col s12">
+            <br>
+                  <div class="row">
+                        <div class="col s12 m4 ">
+                            <a href="curso.html"><div class="card white hoverable course">
+                                <div class="blue darken-4 barra"> 
+                                    <i class="small material-icons">insert_drive_file</i>
+                                    <span class="card-title">Fundamentos del diseño</span>
+                                </div>    
+                              <div class="card-content black-text">
+                                <p>I am a very simple card. I am good at containing small bits of information.
+                                I am convenient because I require little markup to use effectively.</p>
+                              </div>
+                              <div class="card-action">
+                                Periodo 1
+                              </div>
+                            </div> </a>
+                          </div>
+                            <div class="col s12 m4 ">
+                            <div class="card white hoverable course">
+                                <div class="blue darken-2 barra"> 
+                                    <i class="small material-icons">insert_drive_file</i>
+                                    <span class="card-title">Diseño de App Web</span>
+                                </div>    
+                              <div class="card-content black-text">
+                                <p>I am a very simple card. I am good at containing small bits of information.
+                                I am convenient because I require little markup to use effectively.</p>
+                              </div>
+                              <div class="card-action">
+                                Periodo 1
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col s12 m4 ">
+                                <div class="card white hoverable course">
+                                <div class="teal darken-2 barra"> 
+                                    <i class="small material-icons">insert_drive_file</i>
+                                    <span class="card-title">Programación I</span>
+                                </div>    
+                              <div class="card-content black-text">
+                                
+                                <p>I am a very simple card. I am good at containing small bits of information.
+                                I am convenient because I require little markup to use effectively.</p>
+                              </div>
+                              <div class="card-action">
+                                Periodo 1
+                              </div>
+                            </div>
+                          </div>
+                    </div>  
+        </div>
+        <div id="test2" class="col s12">
+            <%- include('chat'); %>
+        </div>
+    </div>
+</div>
+
+<script>
+  var tiempo = new Date();
+  let saludos = ['Buenos Días','Buenas Tardes','Buenas Noches'];
+  let titulo = 'Hola';
+  if(tiempo.getHours() >= 0 && tiempo.getHours() <= 12 ){
+      titulo = `${saludos[0]} <%= user.nombre %>`;
+  }else if(tiempo.getHours() >= 13 && tiempo.getHours() <= 17){
+      titulo = `${saludos[1]} <%= user.nombre %>`;
+  }else if(tiempo.getHours() >= 18 && tiempo.getHours() <= 23){
+      titulo = `${saludos[2]} <%= user.nombre %>`;
+  }
+  document.querySelector('#saludo').innerHTML = titulo;
+</script>  
+<%- include('../footer'); %>
+<%- include('../scripts') %>
